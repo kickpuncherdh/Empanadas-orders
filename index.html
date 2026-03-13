@@ -140,13 +140,13 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" required>
 
-      <label>How many packs? (2 empanadas per pack)</label>
+      <label>How many in each order? 5 empanadas per order!</label>
       <div class="quantity-selector">
         <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
-        <div class="qty-display"><span id="qty">1</span> pack(s)</div>
+        <div class="qty-display"><span id="qty">1</span> order(s)</div>
         <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
       </div>
-      <input type="hidden" id="quantity" name="quantity" value="1 pack (2 empanadas)">
+      <input type="hidden" id="quantity" name="quantity" value="1 order (5 empanadas)">
 
       <div class="total">Total: $<span id="total">25</span></div>
 
@@ -174,7 +174,7 @@
       qty = Math.max(1, qty + delta);
       document.getElementById('qty').textContent = qty;
       document.getElementById('total').textContent = qty * 25;
-      document.getElementById('quantity').value = qty + ' pack(s) (' + (qty * 2) + ' empanadas)';
+      document.getElementById('quantity').value = qty + ' order(s) (' + (qty * 2) + ' empanadas)';
     }
   </script>
 </body>
